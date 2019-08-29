@@ -1,0 +1,18 @@
+<input type="text" class="todo-input" placeholder="Inserir tarefa" [(ngModel)]="tarefaTitulo" >
+<button (click)="adicionarTarefas()">Insere</button>
+<ul>
+<div >
+    <div class="todo-item"  *ngFor=" let tarefa of tarefas">
+        <div class="todo-item-left">
+            <input type="checkbox" ><span>{{tarefa.titulo}}</span>
+            <span class="remove-item" (click)="deletarLista(tarefa.id)">&nbsp;&times;</span>
+        </div>
+
+    </div>
+</div>
+</ul>
+
+    
+
+
+
